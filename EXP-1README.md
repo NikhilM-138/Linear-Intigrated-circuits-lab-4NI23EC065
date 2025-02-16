@@ -52,7 +52,7 @@ This will generate the frequency response of the circuit.
 
 ![image](https://github.com/user-attachments/assets/e48da286-d4d5-48ae-b589-f37fda919bc5)
 
-### To increase the Voltage Gain the Rd changed to 10k ohm and to maintain the ID W is changed to 0.235um 
+### 6. To increase the Voltage Gain the Rd changed to 10k ohm and to maintain the ID W is changed to 0.235um 
 ##### OUTPUT OF OPERATING POINT
 
 ![image](https://github.com/user-attachments/assets/37d72449-a1fd-4d96-8d69-6fdafb020f98)
@@ -65,4 +65,28 @@ This confirmes the mosfet is still working in the Saturation Region.VGD is Great
 The Voltage Gain is (1.32-1.17)V/100mV = 1.5 v/v .
 #### OUTPUT OF AC RESPONSE
 ![image](https://github.com/user-attachments/assets/dab62bd2-792d-4fde-8df9-eeb140a7bd01)
+### 7. REPLACING RD with another MOSFET:
+ We are replaceing the RD with a PMOS L=180nm and W=0.2um same as NMOS. We have to fix the correct biasing voltage for PMOS to operate as the Resistor and also maintian the saturation region of NMOS also.To find Vb
+ For PMOS, VGS<VTH
+   ##### VG-VS<VTH
+   from the library of tsmc018.lib the VTH of PMOS is -0.3906 V.
+ #####  VS = 1.8 V.
+   ##### VG < (1.8-0.3906) V.
+  ##### VG < 1.4094 v.
+   So VG should be less than 1.4094 V. For Gain greater than 1 I am choosing Vb as 1.25V
+#### i)CIRCUIT DIAGRAM
+![image](https://github.com/user-attachments/assets/1a728d3d-2c45-441d-86e7-3e6ef010c742)
 
+#### ii)DC OPERATING POINT
+![image](https://github.com/user-attachments/assets/0b16da59-ee5f-48fd-9795-09c789362bc4)
+
+This confirmes the mosfet is still working in the Saturation Region.VGD is Greater than VTH Hence it is in Saturation Region(VGD>VTH).
+#### iii)TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/7603e0e4-ec9d-4d35-9741-c144d3a23299)
+
+The Voltage Gain is (1.4331-1.31)V/100mV = 1.232 v/v .
+#### iv)AC ANALYSIS
+![image](https://github.com/user-attachments/assets/0e88e620-960c-46b1-bd4f-bc21f8f7b084)
+
+
+   
