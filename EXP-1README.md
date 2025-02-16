@@ -21,7 +21,3 @@ Metal-Oxide-Semiconductor Field-Effect Transistors (MOSFETs) are electronic devi
 The Common Source (CS) amplifier is a fundamental amplifier configuration in CMOS analog circuit design, often utilized for its voltage amplification capabilities. Implemented using a Metal-Oxide-Semiconductor Field-Effect Transistor (MOSFET) in CMOS technology, the CS amplifier provides a moderate voltage gain, high input impedance, and moderate output impedance. In this configuration, the input signal is applied to the gate of the MOSFET, and the output signal is taken from the drain. The performance of a CS amplifier is highly dependent on the biasing conditions, transistor parameters, and load impedance, making it a crucial circuit for understanding MOSFET behavior and amplifier design principles.
 #### CIRCUIT DIAGRAM
 <img src="https://github.com/user-attachments/assets/93230bc0-0532-408f-a659-c1b7883a1c13" width="300" height="300">
-
-
-
-
