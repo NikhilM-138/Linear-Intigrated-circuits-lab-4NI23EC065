@@ -87,6 +87,18 @@ This confirms the mosfet is still working in the Saturation Region.VGD is Greate
 The Voltage Gain is (1.4331-1.31)V/100mV = 1.232 v/v .
 #### iv)AC ANALYSIS
 ![image](https://github.com/user-attachments/assets/0e88e620-960c-46b1-bd4f-bc21f8f7b084)
+### INFERENCE
+Inference of this Experiment:
+   - The NMOS transistor operates in the saturation region, ensuring proper amplification.
 
+  - Voltage gain increased from 0.14 V/V to 1.5 V/V by adjusting Rd and W.
+
+ - Replacing Rd with PMOS improved performance, achieving a gain of 1.232 V/V.
+
+- SPICE simulations confirmed theoretical calculations, validating circuit design principles.
+
+-LTspice analysis provided insights into DC, transient, and AC characteristics of the amplifier.
+### CONCLUSION 
+This experiment successfully    demonstrated the characterization of a Common Source NMOS amplifier using 180nm CMOS technology through SPICE simulation. By analyzing DC operating points, transient response, and AC analysis, we observed how biasing, load resistance, and transistor sizing affect amplifier performance. The replacement of Rd with a PMOS load improved gain while maintaining saturation operation. The experiment reinforced fundamental MOSFET amplifier concepts, highlighting the importance of simulation tools like LTspice for circuit design and analysis.
 
    
