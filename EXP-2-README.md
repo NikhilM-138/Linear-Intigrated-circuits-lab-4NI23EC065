@@ -75,5 +75,7 @@ RD= (VDD - VOCM)/ID1 <br>
   = (2.2-1.25)/0.5m<br>
 RD= 1.9k ohm <br>
 
+### 5. SIMULATION USING A RESISTOR AS A CONSTANT TAIL CURRENT SOURCE
+
 
 
