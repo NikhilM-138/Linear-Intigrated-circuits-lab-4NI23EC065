@@ -75,7 +75,22 @@ RD= (VDD - VOCM)/ID1 <br>
   = (2.2-1.25)/0.5m<br>
 RD= 1.9k ohm <br>
 
-### 5. SIMULATION USING A RESISTOR AS A CONSTANT TAIL CURRENT SOURCE
+### 5. SIMULATION OF MOS DIFF AMPLIFIER USING A RESISTOR AS A CONSTANT TAIL CURRENT SOURCE.
+#### 1. DC ANALYSIS:-
+
+Built the circuit as per the circuit diagram below <br>
+![image](https://github.com/user-attachments/assets/a10e8261-e306-489c-98cf-f32345fb06e8)<br>
+
+To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
+
+![image](https://github.com/user-attachments/assets/50dd6b21-c65e-49e2-ae59-20c673337198)<br>
+
+**The Output matches all the required  design values.** <br>
+This shows two MOSFETS working in the saturation. 
+
+
+
+
 
 
 
