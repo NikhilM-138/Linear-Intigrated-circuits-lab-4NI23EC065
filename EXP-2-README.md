@@ -99,6 +99,9 @@ The above Output shows the Amplified Signal with 180° Phase Shift of input sign
 
 ![image](https://github.com/user-attachments/assets/803a5d72-a341-4064-8358-e0a831032d10)
 
+For Applying the Amplitude of the input signal should be **vgs<<2VOV**.
+vgs<<2*(VGS-VTH). <br>
+vgs<<
 
 The Theoretiacal Gain = **-gmRD** .<br>
 gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
@@ -111,6 +114,12 @@ AV = -443.08mV/100mV = **-4.4308 V/V**. <br>
 Gain in db scale:-
 Av = **20*log(Voutpp/Vinpp).** <br>
 Av = **12.929 db**. <br> 
+
+#### DIFFERENTIAL GAIN:-
+![image](https://github.com/user-attachments/assets/ab5c9ceb-c682-4255-adf7-03687b51a69e)
+
+From the graph The Differential Gain = -900mV/100mV = **-9 V/V**.
+Gain in db scale is = 20*log(Votpp/vinpp) = 19.084 V/V.
 
 #### 3. AC ANALYSIS
 To perform AC Analysis click the edit simulation then click on AC Analysis.<br>
@@ -132,7 +141,9 @@ VICM(max) = 1.25+0.366 .<br>
 
 **Giving the input as VICM(min):-**
 ##### 1.DC ANALYSIS
-![image](https://github.com/user-attachments/assets/8b3bbec1-df04-475d-bd23-5836a36fc80d)
+![image](https://github.com/user-attachments/assets/aef99998-5e3c-4886-b033-0f44145f4aa2)
+
+
 The Paramet values are:-
  - VGS = 0.6V.
  - IDM1 = 0.1mA.
@@ -143,10 +154,11 @@ The Paramet values are:-
  - VICM = 0.8V.
 This shows MOSFET is still working in Saruration Region.
 ##### 2.TRANSIENT ANALYSIS
-![image](https://github.com/user-attachments/assets/781dbd9d-4cc7-48f5-be11-c369d8afeff5)
+![image](https://github.com/user-attachments/assets/b1a9e0a2-5851-4d28-84a8-4950854f1ed2)
 
-Gain is = -130.325m/100m = **-1.30325 V/V**
-The gain has been reduced -1.30325 V/V .
+
+Gain is = -289.23m/100m = **-2.8923 V/V**
+The gain has been reduced -2.893 V/V .
 ##### 3.AC ANALYSIS
 ![image](https://github.com/user-attachments/assets/2859f9fa-2185-439d-8cae-63394a10e961)
 
@@ -154,7 +166,8 @@ The Bandwith has increased to **56.6MHZ** .<br>
 
 **Giving the input as VICM(max):-**
 ##### 1.DC ANALYSIS
-![image](https://github.com/user-attachments/assets/b51b27ad-14a1-4981-8297-d3fbe8108286)
+![image](https://github.com/user-attachments/assets/309e640f-0d79-4deb-85c8-60a7e89d84e9)
+
 The Paramet values are:-
  - VGS = 1.1V.
  - IDM1 = 0.750mA.
@@ -169,7 +182,5 @@ The Paramet values are:-
 Gain is = -65.3m/100m = **-0.653 V/V**.<br>
 The gain has been reduced -0.653 V/V .
 ##### 3.AC ANALYSIS
-
-
-The Bandwith has increased to **56.6MHZ** .<br>
+![image](https://github.com/user-attachments/assets/369df8df-d34f-4f5a-a346-04dbc11ea016)
 
