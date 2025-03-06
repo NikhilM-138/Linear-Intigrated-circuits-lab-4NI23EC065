@@ -91,10 +91,14 @@ VGS > VTH & VDS > VOV<br>
 **VGS = 1.2-0.4 = 0.8V > 0.366V(VTH),** <br>
 **VDS = 1.25-0.4 = 0.85V > (0.8-.366)V = 0.85 > 0.434V (VOV).** <br>
 
+#### 2.TRANAIENT ANALYSIS 
+To perform Transient analysis click the edit Simulation then click on Transient Analysis.<br>
+Now give the stop time as 10ms and Run.
 
+The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.
 
-
-
-
+The Theoretiacal Gain = **-gmRD** .<br>
+gm=
+AV = -(  * 1.9k) = -
 
 
