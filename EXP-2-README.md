@@ -87,6 +87,10 @@ To perform the DC Analysis click the edit simulation and select the DC OP point(
 
 **The Output matches all the required  design values.** <br>
 This shows two MOSFETS working in the saturation. 
+VGS > VTH & VDS > VOV<br>
+**VGS = 1.2-0.4 = 0.8V > 0.366V(VTH),** <br>
+**VDS = 1.25-0.4 = 0.85V > (0.8-.366)V = 0.85 > 0.434V (VOV).** <br>
+
 
 
 
