@@ -107,6 +107,7 @@ AV = -(2.304m  * 1.9k) = **- 4.377 V/V** <br>
 The Practical Gain = **VOUTpp/VINpp** . <br>
 AV = -443.08mV/100mV = **-4.4308 V/V**. <br>
 
+
 Gain in db scale:-
 Av = **20*log(Voutpp/Vinpp).** <br>
 Av = **12.929 db**. <br> 
@@ -129,7 +130,7 @@ VICM(min) = 0.366+0.4 .<br>
 VICM(max) = 1.25+0.366 .<br>
 **VICM(max) = 1.616 V**.<br>
 
-Giving the input as VICM(min):-
+**Giving the input as VICM(min):-**
 ##### 1.DC ANALYSIS
 ![image](https://github.com/user-attachments/assets/8b3bbec1-df04-475d-bd23-5836a36fc80d)
 The Paramet values are:-
@@ -145,8 +146,30 @@ This shows MOSFET is still working in Saruration Region.
 ![image](https://github.com/user-attachments/assets/781dbd9d-4cc7-48f5-be11-c369d8afeff5)
 
 Gain is = -130.325m/100m = **-1.30325 V/V**
-The gain has been reduced -1.30325 v/v.
+The gain has been reduced -1.30325 V/V .
+##### 3.AC ANALYSIS
+![image](https://github.com/user-attachments/assets/2859f9fa-2185-439d-8cae-63394a10e961)
+
+The Bandwith has increased to **56.6MHZ** .<br>
+
+**Giving the input as VICM(max):-**
+##### 1.DC ANALYSIS
+![image](https://github.com/user-attachments/assets/b51b27ad-14a1-4981-8297-d3fbe8108286)
+The Paramet values are:-
+ - VGS = 1.1V.
+ - IDM1 = 0.750mA.
+ - VP = 0.6V.
+ - VDS = 0.174V.
+ - IRSS = 1.5mA.
+ - VOCM = 0.774V.
+ - VICM = 1.7V.
+##### 2.TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/eb74afdd-2aeb-469e-b71d-cbee90ba0c02)
+
+Gain is = -65.3m/100m = **-0.653 V/V**.<br>
+The gain has been reduced -0.653 V/V .
 ##### 3.AC ANALYSIS
 
 
+The Bandwith has increased to **56.6MHZ** .<br>
 
