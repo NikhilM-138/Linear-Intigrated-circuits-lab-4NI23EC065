@@ -98,7 +98,10 @@ Now give the stop time as 10ms and Run.
 The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.
 
 The Theoretiacal Gain = **-gmRD** .<br>
-gm=
-AV = -(  * 1.9k) = -
+gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
+AV = -(2.304m  * 1.9k) = **- 4.377 V/V** <br>
+
+The Practical Gain =
+
 
 
