@@ -97,11 +97,56 @@ Now give the stop time as 10ms and Run.
 
 The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.
 
+![image](https://github.com/user-attachments/assets/803a5d72-a341-4064-8358-e0a831032d10)
+
+
 The Theoretiacal Gain = **-gmRD** .<br>
 gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
 AV = -(2.304m  * 1.9k) = **- 4.377 V/V** <br>
 
-The Practical Gain =
+The Practical Gain = **VOUTpp/VINpp** . <br>
+AV = -443.08mV/100mV = **-4.4308 V/V**. <br>
+
+Gain in db scale:-
+Av = **20*log(Voutpp/Vinpp).** <br>
+Av = **12.929 db**. <br> 
+
+#### 3. AC ANALYSIS
+To perform AC Analysis click the edit simulation then click on AC Analysis.<br>
+Now select the type of sweep as **Decade** , No.of points as **10m** and then give **Starting frequency as 1Hz & Ending as 1MHz** then Run.<br>
+![image](https://github.com/user-attachments/assets/b107632e-ced1-4122-b95e-3ab1c54e97c1) <br>
+
+From the above graph we can get the **Band-Width** of the circuit.<br>
+The Band Width of the Circuit is **2.42 MHz**.
+
+#### 4.Varriying the VICM VOLAGE.
+First we are finding the range of the VICM.<br>
+**VICM(min) = VTH + VP**.<br>
+VICM(min) = 0.366+0.4 .<br>
+**VICM(min) = 0.766 V**.<br>
+
+**VICM(max) = VOCM + VTH**. <br>
+VICM(max) = 1.25+0.366 .<br>
+**VICM(max) = 1.616 V**.<br>
+
+Giving the input as VICM(min):-
+##### 1.DC ANALYSIS
+![image](https://github.com/user-attachments/assets/8b3bbec1-df04-475d-bd23-5836a36fc80d)
+The Paramet values are:-
+ - VGS = 0.6V.
+ - IDM1 = 0.1mA.
+ - VP = 0.159V.
+ - VDS = 1.6V.
+ - IRSS = 0.398mA.
+ - VOCM = 1.8217V.
+ - VICM = 0.8V.
+This shows MOSFET is still working in Saruration Region.
+##### 2.TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/781dbd9d-4cc7-48f5-be11-c369d8afeff5)
+
+Gain is = -130.325m/100m = **-1.30325 V/V**
+The gain has been reduced -1.30325 v/v.
+##### 3.AC ANALYSIS
 
 
 
