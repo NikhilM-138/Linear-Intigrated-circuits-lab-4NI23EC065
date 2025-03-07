@@ -79,7 +79,7 @@ RD= 1.9k ohm <br>
 #### 1. DC ANALYSIS:-
 
 Built the circuit as per the circuit diagram below <br>
-![image](https://github.com/user-attachments/assets/a10e8261-e306-489c-98cf-f32345fb06e8)<br>
+![image](https://github.com/user-attachments/assets/4ec4fa19-337f-485c-9507-746f60306fbb)<br>
 
 To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
 
@@ -123,13 +123,16 @@ Gain in db scale is = 20*log(Votpp/vinpp) = 19.084 V/V.
 
 #### 3. AC ANALYSIS
 To perform AC Analysis click the edit simulation then click on AC Analysis.<br>
-Now select the type of sweep as **Decade** , No.of points as **10m** and then give **Starting frequency as 1Hz & Ending as 1MHz** then Run.<br>
-![image](https://github.com/user-attachments/assets/b107632e-ced1-4122-b95e-3ab1c54e97c1) <br>
+Now select the type of sweep as **Decade** , No.of points as **10m** and then give **Starting frequency as 1Hz & Ending as 1MHz** then Run.<br> <br>
 
-From the above graph we can get the **Band-Width** of the circuit.<br>
-The Band Width of the Circuit is **2.42 MHz**.
+From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
+The Band Width of the Circuit is **22.205 GHz & 12.11db**.
+#### DIFFERENTIAL AC ANALYSIS:-
+![image](https://github.com/user-attachments/assets/6ad475ed-8132-4dab-a1c3-d4bae1e77ddc)
 
-#### 4.Varriying the VICM VOLAGE.
+From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
+The Band Width of the Circuit is **22.205 GHz & 18.13db**.
+#### 4.Varriying the VICM VOLTAGE.
 First we are finding the range of the VICM.<br>
 **VICM(min) = VTH + VP**.<br>
 VICM(min) = 0.366+0.4 .<br>
@@ -139,7 +142,7 @@ VICM(min) = 0.366+0.4 .<br>
 VICM(max) = 1.25+0.366 .<br>
 **VICM(max) = 1.616 V**.<br>
 
-**Giving the input as VICM(min):-**
+**i)Giving the input as VICM(min):-**
 ##### 1.DC ANALYSIS
 ![image](https://github.com/user-attachments/assets/aef99998-5e3c-4886-b033-0f44145f4aa2)
 
@@ -154,17 +157,17 @@ The Paramet values are:-
  - VICM = 0.8V.
 This shows MOSFET is still working in Saruration Region.
 ##### 2.TRANSIENT ANALYSIS
-![image](https://github.com/user-attachments/assets/b1a9e0a2-5851-4d28-84a8-4950854f1ed2)
+![image](https://github.com/user-attachments/assets/1e8f7589-a223-4cbe-8098-6d2d76bdb806)
 
 
-Gain is = -289.23m/100m = **-2.8923 V/V**
-The gain has been reduced -2.893 V/V .
+Gain is = -331.407m/100m = **-331.407 V/V**
+The gain has been reduced -331.407 V/V .
 ##### 3.AC ANALYSIS
-![image](https://github.com/user-attachments/assets/2859f9fa-2185-439d-8cae-63394a10e961)
+![image](https://github.com/user-attachments/assets/5b6f1f20-68bb-4128-ae73-637516d376e6)
 
-The Bandwith has increased to **56.6MHZ** .<br>
+The Bandwith is same. **22.205 GHZ** .<br>
 
-**4.Giving the input as VICM(max):-**
+**ii)Giving the input as VICM(max):-**
 ##### 1.DC ANALYSIS
 ![image](https://github.com/user-attachments/assets/309e640f-0d79-4deb-85c8-60a7e89d84e9)
 
@@ -176,13 +179,15 @@ The Paramet values are:-
  - IRSS = 1.5mA.
  - VOCM = 0.774V.
  - VICM = 1.7V.
+   **This MOSFET IS NOT WORKING IN SATURATION REGION.(Vds<Vov).**
 ##### 2.TRANSIENT ANALYSIS
-![image](https://github.com/user-attachments/assets/eb74afdd-2aeb-469e-b71d-cbee90ba0c02)
+![image](https://github.com/user-attachments/assets/0918b750-6b15-4589-938f-f811e4559ab2)
 
-Gain is = -65.3m/100m = **-0.653 V/V**.<br>
-The gain has been reduced -0.653 V/V .
+Gain is = -30.3m/100m = **-0.303 V/V**.<br>
+The gain has been reduced -0.303 V/V .
 ##### 3.AC ANALYSIS
-![image](https://github.com/user-attachments/assets/369df8df-d34f-4f5a-a346-04dbc11ea016)
+![image](https://github.com/user-attachments/assets/c5221a9b-d80e-4646-be15-d0dad3a7270b)
+
 
 ### 6.SIMULATION OF MOS DIFFERENTIAL AMPLIFIER WITH CONSTANT CURRENT SOURCE IN PLACE OF SOURCE RESISTOR (Rss)
 #### 1.DC ANALYSIS
@@ -229,11 +234,14 @@ Gain in db scale is = 20*log(Votpp/vinpp) = 19.084 V/V.<br>
 #### 3.AC ANALYSIS
 Follow the same steps to perform AC Analysis.
 
+![image](https://github.com/user-attachments/assets/dcf59943-d203-4b63-baca-189b5003fea7).
 
-From the above graph we can get the **Band-Width** of the circuit.<br>
-The Band Width of the Circuit is ** MHz**.
+From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
+The Band Width of the Circuit is **22.205GHz & 12.11db**.
 
-**4.Giving the input as VICM(min):-**
+#### 4.Varriying the VICM VOLTAGE.
+
+**i)Giving the input as VICM(min):-**
 ##### 1.DC ANALYSIS
 ![image](https://github.com/user-attachments/assets/f051895d-8b0d-4411-a336-4286e022b868)
 
@@ -245,3 +253,41 @@ The Paramet values are:-
  - IL = 1mA.
  - VOCM = 1.25V.
  - VICM = 0.7V.
+
+##### 2.TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/3590ab33-a2f4-4a1b-a9eb-d45fbcfd7ba1)
+
+Gain is = -416.10m/100m = **-4.1610 V/V**.<br>
+The gain has been reduced -4.1610 V/V .
+
+##### 3.AC ANALYSIS
+![image](https://github.com/user-attachments/assets/0d341867-5009-407d-b19c-684d74e823ef)
+
+The Bandwith is same. **21.25 GHZ** .<br>
+
+**ii).Giving the input as VICM(max):-**
+##### 1.DC ANALYSIS
+![Screenshot (184)](https://github.com/user-attachments/assets/454c931b-a923-416a-8261-b2cdb568aa56)
+
+The Paramet values are:-
+ - VGS = 0.826V.
+ - IDM1 = 0.5mA.
+ - VP = 0.876V.
+ - VDS = 0.376V.
+ - IL = 1mA.
+ - VOCM = 1.25V.
+ - VICM = 1.7V.
+   
+**This MOSFET IS NOT WORKING IN SATURATION REGION.(Vds<Vov).**
+##### 2.TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/6bd9a7aa-77f1-430f-8e00-4f9b88de2cf4)
+
+Gain is = -416.10m/100m = **-4.1610 V/V**.<br>
+The gain has been reduced -4.1610 V/V .
+##### 3.AC ANALYSIS
+![Screenshot (183)](https://github.com/user-attachments/assets/cdc85b89-61d9-4788-b8a4-987b6daa111b)
+
+The Bandwith has increased to **32.143 GHZ** .<br>
+
+
+
