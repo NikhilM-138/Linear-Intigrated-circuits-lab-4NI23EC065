@@ -118,7 +118,7 @@ Av = **12.929 db**. <br>
 #### DIFFERENTIAL GAIN:-
 ![image](https://github.com/user-attachments/assets/ab5c9ceb-c682-4255-adf7-03687b51a69e)
 
-From the graph The Differential Gain = -900mV/100mV = **-9 V/V**.
+From the graph The Differential Gain = -900mV/100mV = **-9 V/V**.<br>
 Gain in db scale is = 20*log(Votpp/vinpp) = 19.084 V/V.
 
 #### 3. AC ANALYSIS
@@ -183,4 +183,10 @@ Gain is = -65.3m/100m = **-0.653 V/V**.<br>
 The gain has been reduced -0.653 V/V .
 ##### 3.AC ANALYSIS
 ![image](https://github.com/user-attachments/assets/369df8df-d34f-4f5a-a346-04dbc11ea016)
+
+### 6.SIMULATION OF MOS DIFFERENTIAL AMPLIFIER WITH CONSTANT CURRENT SOURCE IN PLACE OF SOURCE RESISTOR (Rss)
+#### 1.DC ANALYSIS
+
+![image](https://github.com/user-attachments/assets/d4aff175-f4bd-431f-9fa1-7f8088d7990c)
+
 
