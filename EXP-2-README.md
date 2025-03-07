@@ -125,6 +125,8 @@ Gain in db scale is = 20*log(Votpp/vinpp) = 19.084 V/V.
 To perform AC Analysis click the edit simulation then click on AC Analysis.<br>
 Now select the type of sweep as **Decade** , No.of points as **10m** and then give **Starting frequency as 1Hz & Ending as 1MHz** then Run.<br> <br>
 
+![image](https://github.com/user-attachments/assets/cd89e240-2e0f-43c8-8b26-bf47754e2c3e)
+
 From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
 The Band Width of the Circuit is **22.205 GHz & 12.11db**.
 #### DIFFERENTIAL AC ANALYSIS:-
@@ -282,8 +284,8 @@ The Paramet values are:-
 ##### 2.TRANSIENT ANALYSIS
 ![image](https://github.com/user-attachments/assets/6bd9a7aa-77f1-430f-8e00-4f9b88de2cf4)
 
-Gain is = -416.10m/100m = **-4.1610 V/V**.<br>
-The gain has been reduced -4.1610 V/V .
+Gain is = -276.72m/100m = **-2.76272 V/V**.<br>
+The gain has been reduced -2.76272 V/V .
 ##### 3.AC ANALYSIS
 ![Screenshot (183)](https://github.com/user-attachments/assets/cdc85b89-61d9-4788-b8a4-987b6daa111b)
 
