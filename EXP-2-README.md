@@ -95,13 +95,13 @@ VGS > VTH & VDS > VOV<br>
 To perform Transient analysis click the edit Simulation then click on Transient Analysis.<br>
 Now give the stop time as 10ms and Run.
 
+![image](https://github.com/user-attachments/assets/803a5d72-a341-4064-8358-e0a831032d10)
 The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.
 
-![image](https://github.com/user-attachments/assets/803a5d72-a341-4064-8358-e0a831032d10)
 
 For Applying the Amplitude of the input signal should be **vgs<<2VOV**.
 vgs<<2*(VGS-VTH). <br>
-vgs<<
+vgs<<2*
 
 The Theoretiacal Gain = **-gmRD** .<br>
 gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
@@ -164,7 +164,7 @@ The gain has been reduced -2.893 V/V .
 
 The Bandwith has increased to **56.6MHZ** .<br>
 
-**Giving the input as VICM(max):-**
+**4.Giving the input as VICM(max):-**
 ##### 1.DC ANALYSIS
 ![image](https://github.com/user-attachments/assets/309e640f-0d79-4deb-85c8-60a7e89d84e9)
 
@@ -186,7 +186,62 @@ The gain has been reduced -0.653 V/V .
 
 ### 6.SIMULATION OF MOS DIFFERENTIAL AMPLIFIER WITH CONSTANT CURRENT SOURCE IN PLACE OF SOURCE RESISTOR (Rss)
 #### 1.DC ANALYSIS
+Built the circuit as per the circuit diagram below <br>
+![image](https://github.com/user-attachments/assets/a336835a-5ec6-4569-aabe-ead7ea38e1d9)
 
+Follow the same steps to perform DC Analysis.
 ![image](https://github.com/user-attachments/assets/d4aff175-f4bd-431f-9fa1-7f8088d7990c)
+**The Output matches all the required  design values.** <br>
+This shows two MOSFETS working in the saturation. 
+VGS > VTH & VDS > VOV<br>
+**VGS = 1.2-0.4 = 0.8V > 0.366V(VTH),** <br>
+**VDS = 1.25-0.4 = 0.85V > (0.8-.366)V = 0.85 > 0.434V (VOV).** <br>
+
+#### 2.TRANAIENT ANALYSIS
+Follow the same steps to perform Transient Analysis.
+
+![image](https://github.com/user-attachments/assets/eda338a2-b380-40da-8405-349d3cdb0e41)
+
+The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.<br>
 
 
+For Applying the Amplitude of the input signal should be **vgs<<2VOV**.
+vgs<<2*(VGS-VTH). <br>
+vgs<<2*
+
+The Theoretiacal Gain = **-gmRD** .<br>
+gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
+AV = -(2.304m  * 1.9k) = **- 4.377 V/V** <br>
+
+The Practical Gain = **VOUTpp/VINpp** . <br>
+AV = -443.094mV/100mV = **-4.43094 V/V**. <br>
+
+Gain in db scale:-
+Av = **20*log(Voutpp/Vinpp).** <br>
+Av = **12.8875 db**. <br> 
+
+#### DIFFERENTIAL GAIN:-
+![image](https://github.com/user-attachments/assets/ba492238-f118-42ad-8a84-6285147f4043)
+
+
+From the graph The Differential Gain = -900mV/100mV = **-9 V/V**.<br>
+Gain in db scale is = 20*log(Votpp/vinpp) = 19.084 V/V.<br>
+#### 3.AC ANALYSIS
+Follow the same steps to perform AC Analysis.
+
+
+From the above graph we can get the **Band-Width** of the circuit.<br>
+The Band Width of the Circuit is ** MHz**.
+
+**4.Giving the input as VICM(min):-**
+##### 1.DC ANALYSIS
+![image](https://github.com/user-attachments/assets/f051895d-8b0d-4411-a336-4286e022b868)
+
+The Paramet values are:-
+ - VGS = 0.8V.
+ - IDM1 = 0.5mA.
+ - VP = -0.099V.
+ - VDS = 1.35V.
+ - IL = 1mA.
+ - VOCM = 1.25V.
+ - VICM = 0.7V.
