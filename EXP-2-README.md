@@ -79,7 +79,7 @@ RD= 1.9k ohm <br>
 #### 1. DC ANALYSIS:-
 
 Built the circuit as per the circuit diagram below <br>
-![image](https://github.com/user-attachments/assets/4ec4fa19-337f-485c-9507-746f60306fbb)<br>
+![image](https://github.com/user-attachments/assets/327f6f52-3ca7-497a-8710-936be8ff803f)<br>
 
 To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
 
@@ -333,6 +333,12 @@ Gain in db scale:-
 Av = **20*log(Voutpp/Vinpp).** <br>
 Av = **11.989 db**. <br>
 
+Differential Gain:
+![image](https://github.com/user-attachments/assets/61d868ce-39e9-4016-8756-fbf9576cbe57)
+
+From the graph The Differential Gain = -800mV/100mV = **-8 V/V**.<br>
+Gain in db scale is = 20*log(Votpp/vinpp) = 18.0617 V/V.<br>
+
 #### 3. AC ANALYSIS
 Follow the same steps to perform AC Analysis.
 
@@ -357,6 +363,7 @@ The Paramet values are:-
  - ID M3=0.394mA.
  - VOCM = 1.825V.
  - VICM = 0.7V.
+
 This shows the MOSFET is working in Saturaation Region
 ##### 2.TRANSIENT ANALYSIS
 ![image](https://github.com/user-attachments/assets/2aec350f-57bc-4025-94ed-d598b93a2cd3)
@@ -390,8 +397,8 @@ The Paramet values are:-
 Gain is = -200.57m/100m = **-2.0057 V/V**.<br>
 The gain has been reduced -2.0057 V/V .
 ##### 3.AC ANALYSIS
-
 ![image](https://github.com/user-attachments/assets/0e55c2f4-5bb3-4206-87d0-e64114617d80)
 
 The Bandwith has increased to **86.7233GHz & 7db** .<br>
+
 
