@@ -258,7 +258,7 @@ The Paramet values are:-
  - IL = 1mA.
  - VOCM = 1.25V.
  - VICM = 0.7V.
-
+This shows the MOSFET is working in Saturation Region
 ##### 2.TRANSIENT ANALYSIS
 ![image](https://github.com/user-attachments/assets/3590ab33-a2f4-4a1b-a9eb-d45fbcfd7ba1)
 
@@ -305,9 +305,93 @@ Built the circuit as per the circuit diagram below <br>
 ![image](https://github.com/user-attachments/assets/c122843e-c5b4-4056-90f4-7b5feeb76aa0)
 
 Follow the same steps to perform DC Analysis.
+![image](https://github.com/user-attachments/assets/80c39c2b-d163-4d09-be5b-127c96778415)
+
+This shows two MOSFETS working in the saturation. 
+VGS > VTH & VDS > VOV<br>
+**VGS = 1.2-0.4 = 0.8V > 0.366V(VTH),** <br>
+**VDS = 1.25-0.4 = 0.85V > (0.8-.366)V = 0.85 > 0.434V (VOV).** <br>
+#### 2. TRANSIENT ANALYSIS
+Follow the same steps to perform Transient Analysis.
+
+![image](https://github.com/user-attachments/assets/4280a35d-5bbc-4c20-8052-3c36826b4ca3)
+
+The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.<br>
+
+For Applying the Amplitude of the input signal should be **vgs<<2VOV**.
+vgs<<2*(VGS-VTH). <br>
+vgs<<2*(0.8-0.366).<br>
+**vgs<<0.868V**
+The Theoretiacal Gain = **-gmRD** .<br>
+gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
+AV = -(2.304m  * 1.9k) = **- 4.377 V/V** <br>
+
+The Practical Gain = **VOUTpp/VINpp** . <br>
+AV = -397.59mV/100mV = **-3.9759 V/V**. <br>
+
+Gain in db scale:-
+Av = **20*log(Voutpp/Vinpp).** <br>
+Av = **11.989 db**. <br>
+
+#### 3. AC ANALYSIS
+Follow the same steps to perform AC Analysis.
+
+![image](https://github.com/user-attachments/assets/652f7a2d-54d3-4db8-8eff-deeadf3e6f6d)
 
 
+From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
+The Band Width of the Circuit is **22.205GHz & 12.11db**
+
+#### 4.Varriying the VICM VOLTAGE.
+
+**i)Giving the input as VICM(min):-**
+##### 1.DC ANALYSIS
+![image](https://github.com/user-attachments/assets/afb99dbc-3226-4c43-976c-3549d312bdd7)
 
 
+The Paramet values are:-
+ - VGS = 0.643V.
+ - IDM1 = 0.197mA.
+ - VP = 0.05V.
+ - VDS = 1.7V.
+ - ID M3=0.394mA.
+ - VOCM = 1.825V.
+ - VICM = 0.7V.
+This shows the MOSFET is working in Saturaation Region
+##### 2.TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/2aec350f-57bc-4025-94ed-d598b93a2cd3)
 
+Gain is = -334.33m/100m = **-3.3433 V/V**.<br>
+The gain has been reduced -3.3433 V/V .
+##### 3.AC ANALYSIS
+
+![image](https://github.com/user-attachments/assets/733ad779-2ed8-4baa-9ac0-ef87e073d0a3)
+
+The Bandwith & Gain is same. **22.205 GHZ & 10.72db** .<br>
+
+**ii).Giving the input as VICM(max):-**
+##### 1.DC ANALYSIS
+![image](https://github.com/user-attachments/assets/e17b59e4-62c8-412e-84b8-f2bbd714a9ed)
+
+The Paramet values are:-
+ - VGS = 0.826V.
+ - IDM1 = 0.5626mA.
+ - VP = 0.835V.
+ - VDS = 0.296V.
+ - ID M3 = 1.11mA.
+ - VOCM = 1.13V.
+ - VICM = 1.7V.
+   
+**This MOSFET IS NOT WORKING IN SATURATION REGION.(Vds<Vov).**
+##### 2.TRANSIENT ANALYSIS
+![image](https://github.com/user-attachments/assets/e42c6ea6-0dbe-48cb-9d97-03d989fbd859)
+
+
+Gain is = -200.57m/100m = **-2.0057 V/V**.<br>
+The gain has been reduced -2.0057 V/V .
+##### 3.AC ANALYSIS
+
+![image](https://github.com/user-attachments/assets/0e55c2f4-5bb3-4206-87d0-e64114617d80)
+
+The Bandwith has increased to **86.7233GHz & 7db** .<br>
 
