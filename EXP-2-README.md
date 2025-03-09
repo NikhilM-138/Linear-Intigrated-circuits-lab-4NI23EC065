@@ -101,7 +101,8 @@ The above Output shows the Amplified Signal with 180° Phase Shift of input sign
 
 For Applying the Amplitude of the input signal should be **vgs<<2VOV**.
 vgs<<2*(VGS-VTH). <br>
-vgs<<2*
+vgs<<2*(0.8-0.366).<br>
+**vgs<<0.868V**
 
 The Theoretiacal Gain = **-gmRD** .<br>
 gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
@@ -181,6 +182,7 @@ The Paramet values are:-
  - IRSS = 1.5mA.
  - VOCM = 0.774V.
  - VICM = 1.7V.
+   
    **This MOSFET IS NOT WORKING IN SATURATION REGION.(Vds<Vov).**
 ##### 2.TRANSIENT ANALYSIS
 ![image](https://github.com/user-attachments/assets/0918b750-6b15-4589-938f-f811e4559ab2)
@@ -214,7 +216,8 @@ The above Output shows the Amplified Signal with 180° Phase Shift of input sign
 
 For Applying the Amplitude of the input signal should be **vgs<<2VOV**.
 vgs<<2*(VGS-VTH). <br>
-vgs<<2*
+vgs<<2*(0.8-0.366).<br>
+**vgs<<0.868V**
 
 The Theoretiacal Gain = **-gmRD** .<br>
 gm= (2*ID)/VOV = (2 * 0.5m)/0.434 = 2.304m Simeon. <br>
@@ -290,6 +293,21 @@ The gain has been reduced -2.76272 V/V .
 ![Screenshot (183)](https://github.com/user-attachments/assets/cdc85b89-61d9-4788-b8a4-987b6daa111b)
 
 The Bandwith has increased to **32.143 GHZ** .<br>
+
+### 7.SIMULATION OF MOS DIFFERENTIAL AMPLIFIER BY REPLACING THE CURRENT SOURCE WITH AN NMOS TRANSISTOR
+For designing the Voltage(Vb) of the MOSFET M3:<br>
+**VGD<=VTH**<br>
+**Vb-VP <= VTH** <br>
+**Vb-0.4 <= 0.366V**
+**Vb <= 0.766V**
+#### 1.DC ANALYSIS
+Built the circuit as per the circuit diagram below <br>
+![image](https://github.com/user-attachments/assets/c122843e-c5b4-4056-90f4-7b5feeb76aa0)
+
+Follow the same steps to perform DC Analysis.
+
+
+
 
 
 
