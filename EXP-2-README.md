@@ -400,7 +400,7 @@ The gain has been reduced -2.0057 V/V .
 ![image](https://github.com/user-attachments/assets/0e55c2f4-5bb3-4206-87d0-e64114617d80)
 
 The Bandwith has increased to **86.7233GHz & 7db** .<br>
-### 7.SIMULATION OF MOS DIFF AMPLIFIER USING REPLACING THE LOAD RESISTORS (𝑅𝐷) WITH PMOS TRANSISTORS
+### 8.SIMULATION OF MOS DIFF AMPLIFIER USING REPLACING THE LOAD RESISTORS (𝑅𝐷) WITH PMOS TRANSISTORS
 #### 1.DC ANALYSIS 
 Built the circuit as per the circuit diagram below <br>
 ![image](https://github.com/user-attachments/assets/e3cc485a-0055-4af4-90a9-a82a992fc122)
@@ -444,5 +444,28 @@ Follow the same steps to perform AC Analysis.
 
 
 From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
-The Band Width of the Circuit is **33.115 GHz & 1.9db**
+The Band Width of the Circuit is **33.115 GHz & 1.9db**.
+### 9. RESULT
+
+| Features          | Circuit 1 Resistor Load | Circuit 2 Current Source Load | Circuit 3 NMOS Active Load | Circuit 4 PMOS Active Load |
+|------------------|------------------------|-------------------------|-----------------------|------------------------|
+| Load Component   | Resistor (R_D)         | Ideal Current Source (I_SS) | NMOS Transistor        | PMOS Transistor        |
+| Gain (Av)        | -4.4308 V/V             | -4.4309 V/V        | -3.9759 V/V        | -1.24 V/V             |
+| Bandwidth        | 22.205 GHz        | 22.205 GHz            | 22.205 GHz       |  33.115 GHz        |
+| Common Mode Input Range (Vincm) | Limited by Rss, Rd | Higher | Highest | Moderate |
+| W/L (μm/nm)      | 6.4u/180n            | 6.4u/180n             | 18.425u/180n           | 10.66 u/180n             |
+| Output Impedance | Low              | High             | Very High     | High            |
+| Power Consumption | High                   | Moderate                 | Low                   | Low                    |
+| Linearity        | Poor (Nonlinear due to Rd) | Good                     | Best (Active Load)   | Best (Active Load)     |
+| Noise Performance| High                    | Moderate                 | Low                   | Low                    |
+| Distortion       | High (Resistor Drop)    | Low                      | Lowest                | Low                    |
+| Fabrication Complexity | Low               | Medium                   | High                  | High                   |
+
+**Observations:**
+- **Circuit 1**: Basic design, limited gain, and output swing.
+- **Circuit 2**: Improved gain and control with an ideal current source.
+- **Circuit 3**: Highest gain but lowest bandwidth due to NMOS active load.
+- **Circuit 4**: Balanced design with PMOS active load, offering good gain
+
+### 10. INFERENCE
 
