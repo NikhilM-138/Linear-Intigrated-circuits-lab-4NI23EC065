@@ -400,5 +400,49 @@ The gain has been reduced -2.0057 V/V .
 ![image](https://github.com/user-attachments/assets/0e55c2f4-5bb3-4206-87d0-e64114617d80)
 
 The Bandwith has increased to **86.7233GHz & 7db** .<br>
+### 7.SIMULATION OF MOS DIFF AMPLIFIER USING REPLACING THE LOAD RESISTORS (𝑅𝐷) WITH PMOS TRANSISTORS
+#### 1.DC ANALYSIS 
+Built the circuit as per the circuit diagram below <br>
+![image](https://github.com/user-attachments/assets/e3cc485a-0055-4af4-90a9-a82a992fc122)
 
+Follow the same steps to perform DC Analysis.
+![image](https://github.com/user-attachments/assets/ba2aed5f-43ee-4276-82b0-9f9b9c362461)
+
+**The Output matches all the required  design values.** <br>
+This shows two MOSFETS working in the saturation. 
+VGS > VTH & VDS > VOV<br>
+**VGS = 1.2-0.399 = 0.801V > 0.366V(VTH),** <br>
+**VDS = 1.25-0.4 = 0.85V > (0.8-.366)V = 0.85 > 0.434V (VOV).** <br>
+
+#### 2. TRANSIENT ANALYSIS
+Follow the same steps to perform Transient Analysis.
+
+![image](https://github.com/user-attachments/assets/5e381807-dcad-497a-9acf-60fb99fecaa9)
+
+
+The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.<br>
+
+The Practical Gain = **VOUTpp/VINpp** . <br>
+AV = -124.8135mV/100mV = **-1.248 V/V**. <br>
+
+Gain in db scale:-
+Av = **20*log(Voutpp/Vinpp).** <br>
+Av = **1.924 db**. <br> 
+
+#### DIFFERENTIAL GAIN:-
+
+![image](https://github.com/user-attachments/assets/87531d4a-433b-494f-987a-6a4fd0722386)
+
+
+From the graph The Differential Gain = -250mV/100mV = **-2.5 V/V**.<br>
+Gain in db scale is = 20*log(Votpp/vinpp) = 7.9588 V/V.<br>
+
+#### 3. AC ANALYSIS
+Follow the same steps to perform AC Analysis.
+
+![image](https://github.com/user-attachments/assets/0ef1dbf0-9521-4cbc-8393-1aeb1e2c6684)
+
+
+From the above graph we can get the **Band-Width & Gain** of the circuit.<br>
+The Band Width of the Circuit is **33.115 GHz & 1.9db**
 
