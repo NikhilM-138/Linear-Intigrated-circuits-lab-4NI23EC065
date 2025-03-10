@@ -163,8 +163,8 @@ This shows MOSFET is still working in Saruration Region.
 ![image](https://github.com/user-attachments/assets/1e8f7589-a223-4cbe-8098-6d2d76bdb806)
 
 
-Gain is = -331.407m/100m = **-331.407 V/V**
-The gain has been reduced -331.407 V/V .
+Gain is = -331.407m/100m = **-3.31407 V/V**
+The gain has been reduced -3.31407 V/V .
 ##### 3.AC ANALYSIS
 ![image](https://github.com/user-attachments/assets/5b6f1f20-68bb-4128-ae73-637516d376e6)
 
@@ -449,7 +449,7 @@ The Band Width of the Circuit is **33.115 GHz & 1.9db**.
 
 | Features          | Circuit 1 Resistor Load | Circuit 2 Current Source Load | Circuit 3 NMOS Active Load | Circuit 4 PMOS Active Load |
 |------------------|------------------------|-------------------------|-----------------------|------------------------|
-| Load Component   | Resistor (R_D)         | Ideal Current Source (I_SS) | NMOS Transistor        | PMOS Transistor        |
+| Load Component   | Resistor (RSS)         | Ideal Current Source (I_SS) | NMOS Transistor        | PMOS Transistor        |
 | Gain (Av)        | -4.4308 V/V             | -4.4309 V/V        | -3.9759 V/V        | -1.24 V/V             |
 | Bandwidth        | 22.205 GHz        | 22.205 GHz            | 22.205 GHz       |  33.115 GHz        |
 | Common Mode Input Range (Vincm) | Limited by Rss, Rd | Higher | Highest | Moderate |
@@ -461,6 +461,19 @@ The Band Width of the Circuit is **33.115 GHz & 1.9db**.
 | Distortion       | High (Resistor Drop)    | Low                      | Lowest                | Low                    |
 | Fabrication Complexity | Low               | Medium                   | High                  | High                   |
 
+<br>
+
+ **Region of Operation ,Gain and Bandwidth Variation at VICM Min and Max**
+
+| Circuit Type                  | VICM (V) | REGION OF OPERATION | Gain (V/V) | Bandwidth (GHz) |
+|--------------------------------|----------|---------|-----------|----------------|
+| Basic Diff Amp (Resistor Load) | 0.8 V (MIN)  | SATURATION REGION    | -3.331         | 22.205              |
+|                                | 1.7 V (MAX)    | TRIODE REGION         | -0.303         | -              |
+| Diff Amp with Active Load      | 0.7 V (MIN)      | SATURATION REGION    |  -4.1610         |  21.25              |
+|                                | 1.7 V (MAX)      |     TRIODE REGION    | -2.7672         |  32.143             |
+| Diff Amp with Current Mirror   | 0.7 V  (MIN)     | SATURATION REGION    | -3.343         | 22.205             |
+|                                | 1.7   (MAX)   |    TRIODE REGION     | -2.0057         | 86.7233             |
+
 **Observations:**
 - **Circuit 1**: Basic design, limited gain, and output swing.
 - **Circuit 2**: Improved gain and control with an ideal current source.
@@ -468,4 +481,46 @@ The Band Width of the Circuit is **33.115 GHz & 1.9db**.
 - **Circuit 4**: Balanced design with PMOS active load, offering good gain
 
 ### 10. INFERENCE
+**1. Common-Mode Rejection Effectiveness**
+The differential amplifier successfully suppresses common-mode signals while amplifying differential signals. This is evident from the high Common-Mode Rejection Ratio (CMRR) observed, which improves noise immunity and makes it suitable for precision applications like instrumentation and communication systems.
 
+**2.Temporary Gain Increase Due to Circuit Dynamics**
+
+![image  width=500](https://github.com/user-attachments/assets/5e51d240-fd87-46bb-8000-594ef43be726)
+
+The gain increases after a certain frequency due to the influence of parasitic capacitances, resonance effects, and circuit topology. Parasitic capacitances, such as gate-to-drain capacitance, momentarily enhance gain before attenuation sets in. Additionally, unintended inductive elements can create resonance, further amplifying the signal in a specific frequency range. In differential amplifiers with active loads, slight positive feedback may also contribute to this rise. Finally, the interaction of system poles and zeros causes a temporary boost before the dominant pole reduces the gain at higher frequencies.
+
+ **3. Impact of Tail Current Source on Gain and Stability**
+Replacing the resistor tail current source with an active current source (NMOS transistor) improves gain stability and increases common-mode rejection. The active current source ensures a more constant tail current, leading to improved linearity and performance.
+
+**4. Effect of VICM Variation on MOSFET Operation**
+The range of the common-mode input voltage (VICM) significantly affects the amplifier’s operation. If VICM exceeds a certain limit, the MOSFETs enter the triode region, reducing gain and affecting circuit performance. Ensuring VICM stays within the allowed range is crucial for maintaining differential operation.
+
+**5.Use of Active Loads for Performance Enhancement**  
+ Replacing passive load resistors with PMOS transistors (active loads) significantly increases gain and bandwidth. This is because active loads provide higher resistance compared to resistors, improving output swing and overall amplifier efficiency.  
+  
+In ideal case Gain has to be increase but in my design **Circuit 3 and Circuit 4**, the gain is not increasing as expected due to the following reasons:  
+
+1. **Mismatch in Active Loads** – If the PMOS transistors used as active loads are not properly matched, they may not provide the expected high resistance, leading to reduced gain.  
+2. **Insufficient Biasing** – The current mirror or biasing circuit might not be supplying the correct operating point, affecting the gain improvement.  
+3. **Parasitic Capacitances** – At higher frequencies, parasitic capacitances in MOSFETs can degrade the gain instead of enhancing it.  
+4. **Channel-Length Modulation** – If the MOSFETs used in the active load have a significant channel-length modulation effect, the expected high output resistance might not be achieved, limiting gain improvement.  
+**Conclusion:** Proper biasing and transistor matching are essential to ensure the expected performance boost with active loads.
+
+
+**6. Frequency Response and Bandwidth Trade-offs**
+The amplifier demonstrates high bandwidth, making it suitable for high-frequency applications. However, as gain increases (especially with active loads), bandwidth can be affected due to increased capacitances. The balance between gain and bandwidth is crucial for designing amplifiers for specific applications.
+
+**7.Frequency Response of Differential Amplifier with Resistive Current Source VICM maximum:-**
+The AC response shown in the plot corresponds to the differential amplifier with a resistive current source (RSS) when the input common-mode voltage (VICM) is at its maximum. The gain decreases compared to an ideal current source due to the finite resistance of RSS, which limits the effective transconductance and reduces the amplifier's ability to reject common-mode signals. Additionally, RSS introduces variations in the bias current, affecting the output impedance and bandwidth, resulting in a lower gain and altered frequency response.
+
+**8.Impact of VICM on Region of Operation, Gain, and Bandwidth**
+The result table shows how the region of operation, gain, and bandwidth vary with the common-mode input voltage (VICM) in different differential amplifier configurations. When VICM is at its minimum, all amplifiers operate in the saturation region, providing higher gain but moderate bandwidth. As VICM increases, the MOSFETs enter the triode region, leading to a significant drop in gain. The bandwidth, however, improves notably in circuits with active loads and current mirrors due to reduced resistance and improved current sourcing. The current mirror configuration demonstrates the highest bandwidth at maximum VICM, highlighting its superior frequency response.
+
+**9.Effect of W/L Ratio on Differential Amplifier Performance**
+The width-to-length (W/L) ratio of MOSFETs significantly influences the gain and bandwidth of differential amplifiers. A higher W/L ratio increases the transconductance (gm), leading to higher gain in the saturation region. However, it also reduces the output resistance, which can impact gain stability and bandwidth. In the triode region, a higher W/L ratio results in lower resistance, causing gain degradation but improving bandwidth. The experimental results indicate that circuits with active loads and current mirrors benefit from optimized W/L ratios, ensuring a trade-off between gain enhancement and frequency response.
+
+**10.Reason for Similar Bandwidth in First Three Circuits**
+The bandwidth in all three differential amplifier circuits remains nearly the same due to the dominant role of parasitic capacitances and transconductance (gm) in determining frequency response. Since all circuits share similar MOSFET device parameters, including W/L ratios and bias currents, their input capacitance and Miller effect influence the high-frequency response similarly. Additionally, the load resistance and node capacitances in each configuration contribute to a comparable pole location, resulting in a similar bandwidth across the three designs.
+
+### 11. CONCLUSION
