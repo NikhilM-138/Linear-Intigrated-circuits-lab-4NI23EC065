@@ -524,3 +524,15 @@ The width-to-length (W/L) ratio of MOSFETs significantly influences the gain and
 The bandwidth in all three differential amplifier circuits remains nearly the same due to the dominant role of parasitic capacitances and transconductance (gm) in determining frequency response. Since all circuits share similar MOSFET device parameters, including W/L ratios and bias currents, their input capacitance and Miller effect influence the high-frequency response similarly. Additionally, the load resistance and node capacitances in each configuration contribute to a comparable pole location, resulting in a similar bandwidth across the three designs.
 
 ### 11. CONCLUSION
+
+- A **MOSFET Differential Amplifier** effectively amplifies the difference between two input signals while rejecting common-mode noise, making it ideal for high-precision applications.  
+- The **basic differential amplifier** using a resistor as a tail current source provides moderate gain and noise rejection but has limited performance in terms of stability.  
+- **Replacing the source resistor (Rss) with a constant current source** improves the **gain stability** and enhances the **common-mode rejection ratio (CMRR)**.  
+- **Using an NMOS transistor as a current source** further enhances performance by maintaining a stable tail current, improving gain, and allowing better differential operation.  
+- **Replacing the load resistors (RD) with PMOS transistors** significantly increases gain and bandwidth by implementing an active load, making the circuit fully active and more efficient.  
+- The circuit's **gain, bandwidth, and performance** depend heavily on the **choice of tail current source and load configuration**.  
+- **Common-mode voltage variation affects the amplifier's gain** and can push MOSFETs out of saturation, impacting circuit performance.  
+- The **differential amplifier with an active load (PMOS transistors)** provides the **highest gain** and **widest bandwidth**, making it the most efficient configuration among the simulated circuits.  
+- The **bandwidth remains relatively stable across configurations**, except for the NMOS current source and PMOS load designs, which show significant improvements.  
+- **Practical gain measurements closely match theoretical calculations**, validating the design approach and simulation accuracy.
+
