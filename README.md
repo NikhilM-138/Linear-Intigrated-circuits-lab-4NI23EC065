@@ -1,8 +1,9 @@
 ```mermaid
+%%{init: {"themeVariables": {"canvasBg": "white"}}}%%
 graph LR
     direction LR
 
-    subgraph **Inputs**
+    subgraph Inputs
         A[i_candidate_1]
         C[i_candidate_2]
         D[i_candidate_3]
@@ -16,14 +17,14 @@ graph LR
 
     B(Voting Machine)
 
-    subgraph **State Machine**
+    subgraph State_Machine
         I{State Machine}
         J[r_present_state]
         K[r_next_state]
         L[r_hold_count]
     end
 
-    subgraph **Vote Counters**
+    subgraph Vote_Counters
         M{Vote Counters}
         N[r_counter_1]
         O[r_counter_2]
@@ -31,7 +32,7 @@ graph LR
         Q[r_counter_4]
     end
 
-    subgraph **NVM**
+    subgraph NVM
         R{NVM}
         S[nvm_count1]
         T[nvm_count2]
@@ -40,57 +41,27 @@ graph LR
         W[nvm_data_valid]
     end
 
-    subgraph **Beep Logic**
+    subgraph Beep_Logic
         AB{Beep Logic}
         AC[beep_counter]
         AD[beep_active]
         AE[o_beep]
     end
 
-    subgraph **Reset Authorization Logic**
+    subgraph Reset_Authorization_Logic
         AG{Reset Authorization Logic}
         AI[stored_pin]
         AJ[r_reset_attempts]
         AK[o_status]
     end
 
-    subgraph **Outputs**
+    subgraph Outputs
         X[o_count1]
         Y[o_count2]
         Z[o_count3]
         AA[o_count4]
         AE
         AK
-    end
-
-    classDef subgraphTitle font-size:16px,font-weight:bold;
-
-    subgraph Inputs
-    class subgraphTitle Inputs
-    end
-
-    subgraph State_Machine
-    class subgraphTitle State_Machine
-    end
-
-    subgraph Vote_Counters
-    class subgraphTitle Vote_Counters
-    end
-
-    subgraph NVM
-    class subgraphTitle NVM
-    end
-
-    subgraph Beep_Logic
-    class subgraphTitle Beep_Logic
-    end
-
-    subgraph Reset_Authorization_Logic
-    class subgraphTitle Reset_Authorization_Logic
-    end
-
-    subgraph Outputs
-    class subgraphTitle Outputs
     end
 
     A --> B
