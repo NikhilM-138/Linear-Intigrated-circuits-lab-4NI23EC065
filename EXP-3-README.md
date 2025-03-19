@@ -37,7 +37,7 @@ The objective of this experiment is to **design, analyze, and simulate a current
 GIVEN:<br>
 VDD = 1.8V <br>
 P <= 1mW <br>
-AV > 10v/v <br>
+AV > -10v/v <br>
 
 ITOTAL = P/VDD <br>
 ITOTAL <= 1/1.8 <br>
