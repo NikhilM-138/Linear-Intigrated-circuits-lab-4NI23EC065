@@ -44,5 +44,13 @@ ITOTAL <= 1/1.8 <br>
 ITOTAL <= 0.555mA <br>
 
 ITOTAL = IREF + IX <br>
+I am fixing **IREF = 100uA.** <br>
+For **1:1 Current mirror ratio IX is 100uA. ITOTAL = 0.2mA < 0.55mA** <br>
+For **1:2 Current mirror ratio IX is 200uA. ITOTAL = 0.3mA < 0.55mA** <br>
+
+### 5. SIMULATION OF CURRENT MIRROR LOAD COMMON SOURCE AMPLIFIER.
+#### 1. DC ANALYSIS
+Built the circuit as per the circuit diagram below <br>
 
 
+To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
