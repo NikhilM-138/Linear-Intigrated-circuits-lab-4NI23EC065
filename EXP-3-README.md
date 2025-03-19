@@ -28,4 +28,21 @@ The objective of this experiment is to **design, analyze, and simulate a current
 - Varying the **current mirror ratio** and analyzing its effect on circuit performance.
 - Studying the impact of current mirroring on **gain, stability, and output swing**.
 
-  
+ #### DESIGN QUSETION
+ <img src="https://github.com/user-attachments/assets/06ca76d9-8dbe-4f3c-bf0d-8adf5344aa02" width="500">
+
+ <img src="https://github.com/user-attachments/assets/54b45a24-683d-4ac3-b220-f6ab146bb944" width="500">
+
+### 4. ANALYTICAL DESIGN APPROACH
+GIVEN:<br>
+VDD = 1.8V <br>
+P <= 1mW <br>
+AV > 10v/v <br>
+
+ITOTAL = P/VDD <br>
+ITOTAL <= 1/1.8 <br>
+ITOTAL <= 0.555mA <br>
+
+ITOTAL = IREF + IX <br>
+
+
