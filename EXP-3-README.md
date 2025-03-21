@@ -48,6 +48,11 @@ I am fixing **IREF = 100uA.** <br>
 For **1:1 Current mirror ratio IX is 100uA. ITOTAL = 0.2mA < 0.55mA** <br>
 For **1:2 Current mirror ratio IX is 200uA. ITOTAL = 0.3mA < 0.55mA** <br>
 
+AV = -gm(ro1||ro2) <br>
+ro1 = 1/λn*ID = 7.092 * 10^12 ohm.<br>
+ro2 = ro1 = 7.092 * 10^12 ohm.<br>
+AV = sqrt(2*ID*uncox*(W/L))* (ro1||ro2).<br>
+
 ### 5. SIMULATION OF CURRENT MIRROR LOAD COMMON SOURCE AMPLIFIER.
 #### 1. DC ANALYSIS
 Built the circuit as per the circuit diagram below <br>
