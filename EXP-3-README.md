@@ -44,18 +44,29 @@ ITOTAL <= 1/1.8 <br>
 ITOTAL <= 0.555mA <br>
 
 ITOTAL = IREF + IX <br>
-I am fixing **IREF = 100uA.** <br>
-For **1:1 Current mirror ratio IX is 100uA. ITOTAL = 0.2mA < 0.55mA** <br>
-For **1:2 Current mirror ratio IX is 200uA. ITOTAL = 0.3mA < 0.55mA** <br>
+For **1:1 Current mirror ratio. IREF = 0.277mA & IX = 0.277mA** <br>
+For **1:2 Current mirror ratio IREF is 0.185mA & IX = 0.365mA** <br>
 
-AV = -gm(ro1||ro2) <br>
-ro1 = 1/λn*ID = 7.092 * 10^12 ohm.<br>
-ro2 = ro1 = 7.092 * 10^12 ohm.<br>
-AV = sqrt(2*ID*uncox*(W/L))* (ro1||ro2).<br>
+**THE ASPECT RATIO'S OF MOSFET FOR 1:1 CURRENT MIRROR**:<br>
+  - M1 = 3um/180nm
+  - M2 = 3um/180nm
+  - M3 = 3um/180nm
+**VGS = 0.838V**<br>
 
-### 5. SIMULATION OF CURRENT MIRROR LOAD COMMON SOURCE AMPLIFIER.
+**THE ASPECT RATIO'S OF MOSFET FOR 1:2 CURRENT MIRROR**:<br>
+  - M1 = 6um/180nm
+  - M2 = 3um/180nm
+  - M3 = 6um/180nm
+**VGS = 0.763V**<br>
+### 5. SIMULATION OF CURRENT MIRROR LOAD COMMON SOURCE AMPLIFIER OF 1:1 MIRROR RATIO.
 #### 1. DC ANALYSIS
 Built the circuit as per the circuit diagram below <br>
+![image](https://github.com/user-attachments/assets/e1d7d12b-df7c-44db-915c-c26ca484a56f)
 
 
 To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
+![image](https://github.com/user-attachments/assets/dd4127da-8e3c-4710-b74f-017639d1210d)
+
+
+**ID M1 =  277uA , ID M2 = 277.5uA , ID M3 = 277.5uA .**<br>
+
