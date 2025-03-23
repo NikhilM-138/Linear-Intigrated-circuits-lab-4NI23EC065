@@ -54,19 +54,56 @@ For **1:2 Current mirror ratio IREF is 0.185mA & IX = 0.365mA** <br>
 **VGS = 0.838V**<br>
 
 **THE ASPECT RATIO'S OF MOSFET FOR 1:2 CURRENT MIRROR**:<br>
-  - M1 = 6um/180nm
-  - M2 = 3um/180nm
+  - M1 = 3um/180nm
+  - M2 = 6um/180nm
   - M3 = 6um/180nm
 **VGS = 0.763V**<br>
 ### 5. SIMULATION OF CURRENT MIRROR LOAD COMMON SOURCE AMPLIFIER OF 1:1 MIRROR RATIO.
 #### 1. DC ANALYSIS
 Built the circuit as per the circuit diagram below <br>
-![image](https://github.com/user-attachments/assets/e1d7d12b-df7c-44db-915c-c26ca484a56f)
+![image](https://github.com/user-attachments/assets/a0dea230-bf02-4c0a-a8de-d35094477f26)
 
 
 To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
 ![image](https://github.com/user-attachments/assets/dd4127da-8e3c-4710-b74f-017639d1210d)
 
 
-**ID M1 =  277uA , ID M2 = 277.5uA , ID M3 = 277.5uA .**<br>
+**ID M1 =  277uA , ID M2 = 277.5uA , ID M3 = 277.5uA .** <br>
+#### 2.TRANAIENT ANALYSIS 
+To perform Transient analysis click the edit Simulation then click on Transient Analysis.<br>
+Now give the stop time as 10ms and Run.<br>
 
+![image](https://github.com/user-attachments/assets/12b6c47d-f490-4395-a346-421ca9effbe2)
+
+The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.<br>
+
+The Gian from The Transient Analysis is 10.1 V/V.
+#### 3. AC ANALYSIS
+To perform AC Analysis click the edit simulation then click on AC Analysis.<br>
+Now select the type of sweep as **Decade** , No.of points as **10m** and then give **Starting frequency as 1Hz & Ending as 1MHz** then Run.<br>
+
+![image](https://github.com/user-attachments/assets/dcb6bc48-a962-4f5b-b354-37e79c4b3d66)
+
+**Gain in db is 22.1db & Bandwidth is 2.29GHz .**
+
+### 6. SIMULATION OF CURRENT MIRROR LOAD COMMON SOURCE AMPLIFIER OF 1:2 MIRROR RATIO.
+#### 1.DC ANALYSIS
+![image](https://github.com/user-attachments/assets/3683c9d2-3189-4595-9001-08793225dd39)
+
+Follow the same steps to perform DC Analysis.
+
+![image](https://github.com/user-attachments/assets/607d7b1a-d17d-42ff-8f7d-a1e1b3fd0f8b)
+
+**ID M1 =  185uA , ID M2 = 365.17uA , ID M3 = 365.17uA .** <br>
+#### 2.TRANAIENT ANALYSIS
+Follow the same steps to perform Transient Analysis.
+
+![image](https://github.com/user-attachments/assets/a5bc3066-6712-4e5f-be58-d15f7e961d0f)
+The above Output shows the Amplified Signal with 180° Phase Shift of input signal of Amplitude 50mV.<br>
+
+The Gian from The Transient Analysis is 11.69 V/V.
+#### 3. AC ANALYSIS
+Follow the same steps to perform AC Analysis.
+![image](https://github.com/user-attachments/assets/9de834c1-efea-4407-93df-54240af92add)
+
+**Gain in db is 22.96db & Bandwidth is 1.435GHz .**
