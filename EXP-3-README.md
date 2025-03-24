@@ -47,6 +47,8 @@ ITOTAL = IREF + IX <br>
 For **1:1 Current mirror ratio. IREF = 0.277mA & IX = 0.277mA** <br>
 For **1:2 Current mirror ratio IREF is 0.185mA & IX = 0.365mA** <br>
 
+**THE ASPECT RATIO'S OF MOSFET IS 16.66**<br>
+
 **THE ASPECT RATIO'S OF MOSFET FOR 1:1 CURRENT MIRROR**:<br>
   - M1 = 3um/180nm
   - M2 = 3um/180nm
@@ -171,3 +173,126 @@ Follow the same steps to perform AC Analysis.
 ![image](https://github.com/user-attachments/assets/823062b0-a8d5-4e91-b536-e9b09b2b0f94)
 
 **Gain in db is 28.4db & Bandwidth is 246.09MHz .**
+### 9.VARRIYING L VALUE:
+I) L=500nm then w = 8.334um
+NOW PERFORMING THE DC ANALYSIS:
+![image](https://github.com/user-attachments/assets/1c427742-fd94-46e8-a2f1-e05b63fd679e)
+
+**ID M1 = 82.7mA , ID M2 = 0.768pA , ID M3 = 2.52pA .** <br>
+
+II)L = 1um then W = 16.667u
+NOW PERFORMING THE DC ANALYSIS:
+![image](https://github.com/user-attachments/assets/4ff29699-6832-478a-a610-bb8d4ad42c1d)
+
+**ID M1 = 167.101mA , ID M2 = 2.74pA , ID M3 = 4.766pA .** <br>
+
+### 10. PART B:DESIGN OF DIFFERENTIAL AMPLIFIER USING CURRENT MIRROR
+ The circuit comprises six MOSFETs (M1 to M6) with distinct (W/L) ratios, designed to operate in the **saturation region** to maintain accurate **current mirroring** and **signal amplification**. The aspect ratios of the transistors are carefully chosen to optimize **transconductance (gm), output resistance (ro), and overall circuit stability**.  
+
+- **M1, M2, M3:** **(W/L) = 108μm / 180nm**  
+  → These transistors form the **current mirror pair**, ensuring **precise current replication**.  
+
+- **M4:** **(W/L) = 49.1μm / 180nm**  
+  → Acts as an **active load**, influencing the **gain** and **linearity** of the circuit.  
+
+- **M5, M6:** **(W/L) = 57.33μm / 180nm**  
+  → Function as **differential pair transistors**, determining the circuit's **input impedance** and **common-mode rejection ratio (CMRR)**.  
+#### 1.DC ANALYSIS
+Built the circuit as per the circuit diagram below <br>
+![image](https://github.com/user-attachments/assets/f23ff582-fe6e-46ca-b8d9-4f0cc72899e1)
+
+
+To perform the DC Analysis click the edit simulation and select the DC OP point(.op).<br>
+![image](https://github.com/user-attachments/assets/0babd943-a298-4748-82f0-37c14563c7a0)
+
+#### 2.TRANSIENT ANALYSIS
+Follow the same steps to perform Transient
+![image](https://github.com/user-attachments/assets/c8a30210-e061-4910-9874-6e302a13eb87)
+GAIN is -29.6/20 = 1.45 v/v.
+
+### 11.RESULT
+**Performance Comparision table wrt Current Mirror Ratio:** <br>
+| **Current Mirror Ratio** | **IREF (mA)** | **IX (mA)** | **VGS (V)** | **M1 (W/L)** | **M2 (W/L)** | **M3 (W/L)** | **Gain (V/V)** | **Gain (dB)** | **Bandwidth (MHz)** |
+|-------------------------|---------------|-------------|-------------|--------------|--------------|--------------|----------------|---------------|---------------------|
+| **1:1** | 0.277 | 0.277 | 0.838 | 3µm/180nm | 3µm/180nm | 3µm/180nm | -10.1 | 22.1 | 2290 |
+| **1:2** | 0.185 | 0.365 | 0.763 | 3µm/180nm | 6µm/180nm | 6µm/180nm | -11.69 | 22.96 | 1435 |
+| **1:3** | 0.139 | 0.416 | 0.632 | 6µm/180nm | 18µm/180nm | 18µm/180nm | -14.69 | 27.3 | 493.4 |
+| **1:4** | 0.111 | 0.444 | 0.604 | 9µm/180nm | 36µm/180nm | 36µm/180nm | -15.6 | 28.4 | 246.1 |
+
+---
+### 12.INFERENCE
+
+
+From the experiment and simulations, the following technical inferences can be drawn regarding the **Current Mirror Load Common Source Amplifier** and the **impact of varying the current mirror ratio**:
+
+---
+
+ **1. Impact of Current Mirror Ratio on Gain and Bandwidth**
+- As the **current mirror ratio increases**, the **gain increases**, as seen from the values in the comparison table:
+  - **1:1 ratio → Gain = -10.1 V/V**
+  - **1:2 ratio → Gain = -11.69 V/V**
+  - **1:3 ratio → Gain = -14.69 V/V**
+  - **1:4 ratio → Gain = -15.6 V/V**
+- This happens because a **larger IX (mirrored current) increases the transconductance (gm)**, which directly impacts the voltage gain:
+  
+  \[
+  A_v = -g_m \cdot r_o
+  \]
+
+- However, as gain increases, **bandwidth decreases significantly** due to the trade-off between gain and frequency response:
+  - **1:1 ratio → Bandwidth = 2290 MHz**
+  - **1:2 ratio → Bandwidth = 1435 MHz**
+  - **1:3 ratio → Bandwidth = 493.4 MHz**
+  - **1:4 ratio → Bandwidth = 246.1 MHz**
+- The **higher gain reduces the bandwidth** because increasing the W/L ratio of the MOSFETs **increases capacitance**, which limits high-frequency response.
+
+---
+
+ **2. Voltage Variations and Threshold Effects**
+- The **gate-source voltage (VGS) decreases as the current mirror ratio increases**:
+  - **1:1 ratio → VGS = 0.838V**
+  - **1:2 ratio → VGS = 0.763V**
+  - **1:3 ratio → VGS = 0.632V**
+  - **1:4 ratio → VGS = 0.604V**
+- This happens because, in a current mirror, the MOSFET aspect ratio (W/L) is adjusted to achieve the required current ratio.
+- **A lower VGS suggests that the MOSFETs are operating deeper in the saturation region**, which improves current replication accuracy.
+
+---
+ **3. Effect of MOSFET Aspect Ratio (W/L)**
+- As the **current mirror ratio increases, the W/L ratio of the current mirror transistors (M2, M3) increases significantly**:
+  - **1:1 ratio → (M2, M3) = 3µm/180nm**
+  - **1:2 ratio → (M2, M3) = 6µm/180nm**
+  - **1:3 ratio → (M2, M3) = 18µm/180nm**
+  - **1:4 ratio → (M2, M3) = 36µm/180nm**
+- Increasing W/L improves current mirroring accuracy but **increases parasitic capacitance**, affecting speed and stability.
+- A **larger MOSFET** results in **higher output resistance (r_o)**, which enhances gain but reduces bandwidth.
+
+---
+
+ **4. DC Accuracy and Current Matching**
+- From the **DC Analysis**, it is observed that **ID (drain current) values closely match the expected current mirror ratios**:
+  - Example for **1:2 ratio**:  
+    - **IREF = 185 µA**, **IX (mirrored current) = 365 µA**, which is very close to the expected 1:2 ratio.
+  - Example for **1:3 ratio**:  
+    - **IREF = 139 µA**, **IX = 416 µA**, which is also accurate.
+- This confirms that the **current mirror circuit effectively replicates the reference current**, proving its reliability in biasing applications.
+
+---
+
+ **5. Trade-offs Between Gain, Bandwidth, and Stability**
+- **Higher current mirror ratios provide more gain** but reduce bandwidth.
+- **Large W/L ratios enhance current mirroring accuracy** but introduce **higher parasitic capacitance**, affecting **high-frequency performance**.
+- The circuit shows **180° phase shift**, as expected for a **common-source amplifier with active load**.
+- For applications requiring **higher bandwidth (e.g., RF amplifiers)**, a **lower current mirror ratio (1:1 or 1:2) is preferable**.
+- For applications needing **high gain (e.g., precision analog circuits)**, a **higher current mirror ratio (1:3 or 1:4) is beneficial**.
+
+---
+
+### 13. **Conclusion**
+- The experiment **successfully demonstrates how varying the current mirror ratio impacts the performance of an amplifier**.
+- **Current mirror loads provide significant gain enhancement over resistive loads**, making them ideal for **differential amplifiers and operational amplifiers**.
+- **A balance between gain and bandwidth must be considered** based on circuit requirements.
+- The **results validate theoretical expectations**, confirming the accuracy and efficiency of current mirrors in analog design.
+
+---
+
