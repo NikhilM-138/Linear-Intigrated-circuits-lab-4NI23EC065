@@ -209,6 +209,9 @@ To perform the DC Analysis click the edit simulation and select the DC OP point(
 Follow the same steps to perform Transient
 ![image](https://github.com/user-attachments/assets/c8a30210-e061-4910-9874-6e302a13eb87)
 GAIN is -29.6/20 = 1.45 v/v.
+#### 3.AC ANALYSIS
+![image](https://github.com/user-attachments/assets/320bad0a-fe17-4608-9d21-bca2e2822ad8)
+The Gain is 25.3db.
 
 ### 11.RESULT
 **Performance Comparision table wrt Current Mirror Ratio:** <br>
@@ -285,6 +288,10 @@ From the experiment and simulations, the following technical inferences can be d
 - The circuit shows **180° phase shift**, as expected for a **common-source amplifier with active load**.
 - For applications requiring **higher bandwidth (e.g., RF amplifiers)**, a **lower current mirror ratio (1:1 or 1:2) is preferable**.
 - For applications needing **high gain (e.g., precision analog circuits)**, a **higher current mirror ratio (1:3 or 1:4) is beneficial**.
+
+---
+**6.Gain and Bandwidth Are Lower in Differential Mode**
+ In differential mode, both gain and bandwidth are typically lower compared to single-ended operation due to the way signals are processed and shared between transistors. Since the amplifier responds only to the difference between two input signals, each transistor receives only half of the total signal, effectively reducing the gain. Additionally, the load is shared between both transistors, further decreasing the overall amplification. Bandwidth reduction occurs due to increased parasitic capacitances introduced by current mirror loads and common-mode rejection circuits, which limit high-frequency performance. Moreover, the input capacitance is effectively doubled in differential mode, leading to a lower bandwidth compared to single-ended operation. These factors create a trade-off where differential amplifiers provide better noise immunity and rejection of common-mode signals but at the cost of reduced gain and bandwidth.
 
 ---
 
