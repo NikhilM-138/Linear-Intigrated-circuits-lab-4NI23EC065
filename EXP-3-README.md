@@ -294,7 +294,10 @@ From the experiment and simulations, the following technical inferences can be d
  - In differential mode, both gain and bandwidth are typically lower compared to single-ended operation due to the way signals are processed and shared between transistors. Since the amplifier responds only to the difference between two input signals, each transistor receives only half of the total signal, effectively reducing the gain. Additionally, the load is shared between both transistors, further decreasing the overall amplification. Bandwidth reduction occurs due to increased parasitic capacitances introduced by current mirror loads and common-mode rejection circuits, which limit high-frequency performance. Moreover, the input capacitance is effectively doubled in differential mode, leading to a lower bandwidth compared to single-ended operation. These factors create a trade-off where differential amplifiers provide better noise immunity and rejection of common-mode signals but at the cost of reduced gain and bandwidth.
 
 ---
+**7.Effect of Changing L Value in a Current Mirror**
 
+- In a current mirror circuit, the length (L) of the MOSFET channel plays a crucial role in determining the device characteristics. When the L value is changed, it affects the output current due to variations in channel resistance and output conductance. A longer channel length (higher L) increases channel resistance, reducing short-channel effects and improving output resistance, which helps maintain a more stable current. Conversely, a shorter channel length (lower L) results in increased channel modulation, causing greater variations in output current due to drain voltage changes. This explains why modifying the L value alters the mirrored current, impacting the circuit's performance and accuracy.
+---
 ### 13. **Conclusion**
 - The experiment **successfully demonstrates how varying the current mirror ratio impacts the performance of an amplifier**.
 - **Current mirror loads provide significant gain enhancement over resistive loads**, making them ideal for **differential amplifiers and operational amplifiers**.
